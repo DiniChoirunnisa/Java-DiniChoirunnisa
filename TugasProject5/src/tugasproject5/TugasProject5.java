@@ -52,5 +52,10 @@ public class TugasProject5 {
     {
         System.out.print ("Minggu");
     }
+    else
+    {
+        System.out.print ("pilihan tidak tersedia");
+    }
+    
 }
 }

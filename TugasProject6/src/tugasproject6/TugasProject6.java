@@ -40,6 +40,10 @@ public class TugasProject6 {
     {
         System.out.print ("Dini hari");
     }
+    else 
+    {
+        System.out.print ("Pilihan tidak tersedia");
+    }
     }
     
 }
