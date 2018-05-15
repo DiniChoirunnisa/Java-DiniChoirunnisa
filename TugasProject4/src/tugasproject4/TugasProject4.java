@@ -19,7 +19,7 @@ public class TugasProject4 {
     public static void main(String[] args) {
      int panjang, lebar, tinggi, LPbalok;
     Scanner LP = new Scanner (System.in);
-    System.out.println("program volume balok");
+    System.out.println("program permukaan balok");
     System.out.print("panjang : ");
     panjang=LP.nextInt();
     System.out.print("lebar : ");
