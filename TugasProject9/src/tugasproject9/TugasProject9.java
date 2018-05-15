@@ -23,6 +23,7 @@ public class TugasProject9 {
   
   for (int i=1;i<4;i++)
       //i++ digunakan untuk penambahan i+1 sampai i<4
+      //kalau tipe data char digunakan 'kode' pada case yang akan diketik
   {
       
       System.out.println ("Data peserta ke-"+i);
