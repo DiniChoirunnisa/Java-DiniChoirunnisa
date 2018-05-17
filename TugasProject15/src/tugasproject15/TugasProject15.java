@@ -125,6 +125,18 @@ public class TugasProject15 {
         System.out.println ("]");
     }    
     
+    for (int i=0;i<2;i++)
+    {
+        for (int j=0;j<2;j++)
+        { 
+            int hasilakhir=0; 
+            for (int k=0;k<2;k++)
+            {
+            hasilakhir= hasil_kali[i][j]+hasil_perkalian[i][j];
+            }
+            hasil_perhitungan[i][j]=hasilakhir;
+        }
+    }
     
     System.out.println();
     System.out.println ("4 * MATRIKS A + MATRIKS B * MATRIKS C");
