@@ -22,9 +22,9 @@ public gajian(){
     nama="";
     golongan="";
     nomorinduk="";
-    int potongan=0;
-    int tunjangan=0;
-    int gaji=0;
+    potongan=0;
+    tunjangan=0;
+    gaji=0;
 }
 
 //Procedure input
