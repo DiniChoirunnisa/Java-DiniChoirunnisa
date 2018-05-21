@@ -13,8 +13,8 @@ import java.util.Scanner;
  */
 
 class gajian{
-        String nama,golongan,nomorinduk;
-        int total,gaji,tunjangan,potongan;
+        String nama,golongan, nomorinduk;
+        int potongan, tunjangan, gaji;
         
         
 //contructor
@@ -22,10 +22,9 @@ public gajian(){
     nama="";
     golongan="";
     nomorinduk="";
-    total=0;
-    gaji=0;
-    tunjangan=0;
-    potongan=0;
+    int potongan=0;
+    int tunjangan=0;
+    int gaji=0;
 }
 
 //Procedure input
@@ -41,8 +40,9 @@ public void input (){
     System.out.print("Masukkan Golongan [1/2/3/4] : ");
     golongan=input.nextLine();
 
-
+}
 //Function if else/switch
+public void switch_case(){
 switch(golongan){
             case "1":
                 gaji=2000000;
@@ -98,6 +98,7 @@ public class TugasProject16 {
         // TODO code application logic here
     gajian pgw=new gajian();
     pgw.input();
+    pgw.switch_case();
     pgw.output();
     }
     
