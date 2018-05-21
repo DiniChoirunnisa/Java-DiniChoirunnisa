@@ -49,7 +49,8 @@ public void input (){
 
 //Function total
 public double total(){
-    return ((np*0.4)+(np1*0.3)+(np2*0.3));
+    total=((np*0.4)+(np1*0.3)+(np2*0.3));
+    return (total);
 }
 
 //Function Ifelse
