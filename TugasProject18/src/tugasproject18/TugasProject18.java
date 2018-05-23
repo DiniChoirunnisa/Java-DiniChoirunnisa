@@ -11,6 +11,8 @@ import java.util.Scanner;
  *
  * @author GeeksFarm
  */
+
+//REVIEW OOP+IF+LOOPING
 class Travel{
         String nama, jurusan, jenis, ulang;
         int total, jumlah_kursi, harga, ac, nonac, kembalian, jumlahuang ;
@@ -127,8 +129,7 @@ public int kembali(){
 public void output(){
     Scanner ulg= new Scanner (System.in);
     System.out.println("kembalian "+kembalian);
-    System.out.print("Ulangi lagi [Y/N]?");
-    ulang=ulg.nextLine();
+    
     System.out.println("======================================");
     
 }
@@ -141,6 +142,11 @@ public class TugasProject18 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    
+    
+    String ulang;
+    Scanner inputan=new Scanner(System.in);
+    do{
     Travel bis=new Travel();
     bis.input();
     bis.ifelse();
@@ -148,7 +154,10 @@ public class TugasProject18 {
     bis.jumlahuang();
     bis.kembali();
     bis.output();
-    bis.input();
+        System.out.print ("Ulangi lagi [Y/N]? ");
+        ulang=inputan.next();
+    }
+    while ("Y".equals(ulang));
     }
     
 }
