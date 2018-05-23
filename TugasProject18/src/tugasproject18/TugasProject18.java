@@ -12,14 +12,14 @@ import java.util.Scanner;
  * @author GeeksFarm
  */
 class Travel{
-        String nama, jurusan, jenis;
-        int total, jumlah_kursi, harga, ac, nonac, kembalian, jumlahuang, ulang ;
+        String nama, jurusan, jenis, ulang;
+        int total, jumlah_kursi, harga, ac, nonac, kembalian, jumlahuang ;
         
 public Travel(){
     nama="";
     jurusan="";
     jenis="";
-    ulang=0;
+    ulang="";
     harga=0;
     total=0;
     jumlah_kursi=0;
@@ -81,7 +81,7 @@ switch(jurusan){
                 } 
                 break;
             case "Jogja": 
-                if ("NA".equals(jenis))
+                if ("Non AC".equals(jenis))
                 {
                 harga=40000;
                 }
@@ -128,7 +128,7 @@ public void output(){
     Scanner ulg= new Scanner (System.in);
     System.out.println("kembalian "+kembalian);
     System.out.print("Ulangi lagi [Y/N]?");
-    ulang=ulg.nextInt();
+    ulang=ulg.nextLine();
     System.out.println("======================================");
     
 }
@@ -148,6 +148,7 @@ public class TugasProject18 {
     bis.jumlahuang();
     bis.kembali();
     bis.output();
+    bis.input();
     }
     
 }
