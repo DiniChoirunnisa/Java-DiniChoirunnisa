@@ -98,13 +98,13 @@ public int total(){
         System.out.println("Total harga :  "+total);
         bayar();
         kembalian();
-        System.out.println("kembalian : "+kembali);
+        System.out.println("Kembalian : "+kembali);
         System.out.println("Terimakasih sudah membeli");
     }
  
 public void bayar(){
     
-    System.out.print("Masukkan jumlah uang : ");
+    System.out.print("Bayar : ");
         jumlahuang=input.nextInt();
     } 
     
