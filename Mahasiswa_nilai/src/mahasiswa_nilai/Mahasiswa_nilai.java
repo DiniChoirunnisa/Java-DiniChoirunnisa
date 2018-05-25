@@ -13,7 +13,8 @@ import java.util.Scanner;
  */
 class mahasiswanilai{
     String jmlhnilai,Nomor_mahasiswa, Nama_mahasiswa, Kelas, Semester, Nilai_pemograman, Nilai_database, Nilai_design, Nilai_algoritma;
-    int jumlah_nilai, nilai, ratarata, nilaimhs;
+    int nilai, nilaiprg, nilaidsg, nilaidsb, nilaialg;
+    double ratarata, jumlah_nilai;
 Scanner input= new Scanner(System.in);
 
 
@@ -27,6 +28,9 @@ public mahasiswanilai(){
     Nilai_database="";
     Nilai_design="";
     Nilai_algoritma="";
+    ratarata=0.0;
+    jumlah_nilai=0.0;
+    nilai=0;
 }        
 
 //Procedure input
@@ -63,87 +67,100 @@ public void ifelse (){
 
         if ("A".equals(Nilai_pemograman))
                 {
-                    nilaimhs=4;
+                    nilaiprg=4;
                     }
         else if ("B".equals(Nilai_pemograman))
-                {   nilaimhs=3;
+                {   
+                    nilaiprg=3;
                     }
         else if ("C".equals(Nilai_pemograman))
-                {   nilaimhs=2;
+                {   
+                    nilaiprg=2;
                     }
         else if ("D".equals(Nilai_pemograman))
-                {   nilaimhs=1;
+                {   
+                    nilaiprg=1;
                     }
         else 
-                {   nilaimhs=0;
+                {   nilaiprg=0;
                     }
         
         if ("A".equals(Nilai_database))
                 {
-                    nilaimhs=4;
+                    nilaidsb=4;
                     }
         else if ("B".equals(Nilai_database))
-                {   nilaimhs=3;
+                {   
+                    nilaidsb=3;
                     }
         else if ("C".equals(Nilai_database))
-                {   nilaimhs=2;
+                {   
+                    nilaidsb=2;
                     }
         else if ("D".equals(Nilai_database))
-                {   nilaimhs=1;
+                {   
+                    nilaidsb=1;
                     }
         else 
-                {   nilaimhs=0;
+                {   nilaidsb=0;
                     }
         
         if ("A".equals(Nilai_design))
                 {
-                    nilaimhs=4;
+                    nilaidsg=4;
                     }
         else if ("B".equals(Nilai_design))
-                {   nilaimhs=3;
+                {   
+                    nilaidsg=3;
                     }
         else if ("C".equals(Nilai_design))
-                {   nilaimhs=2;
+                {   
+                    nilaidsg=2;
                     }
         else if ("D".equals(Nilai_design))
-                {   nilaimhs=1;
+                {   
+                    nilaidsg=1;
                     }
         else 
-                {   nilaimhs=0;
+                {   nilaidsg=0;
                     }
         
         
         if ("A".equals(Nilai_algoritma))
                 {
-                    nilaimhs=4;
+                    
+                    nilaialg=4;
                     }
         else if ("B".equals(Nilai_algoritma))
-                {   nilaimhs=3;
+                {   
+                    nilaialg=3;
                     }
         else if ("C".equals(Nilai_algoritma))
-                {   nilaimhs=2;
+                {   
+                    nilaialg=2;
                     }
         else if ("D".equals(Nilai_algoritma))
-                {   nilaimhs=1;
+                {   
+                    nilaialg=1;
                     }
         else 
-                {   nilaimhs=0;
+                {   nilaialg=0;
                     }
         
         
     }
 
-public int Jumlahnilai(){
+public double Jumlahnilai(){
     //mengubah variabel str menjadi int
-        int Nilai_pemograman=nilaimhs;
-        int Nilai_database=nilaimhs;
-        int Nilai_design=nilaimhs;
-        int Nilai_algoritma=nilaimhs;
+        int Nilai_pemograman=nilaiprg;
+        int Nilai_database=nilaidsb;
+        int Nilai_design=nilaidsg;
+        int Nilai_algoritma=nilaialg;
         jumlah_nilai=(Nilai_pemograman*4)+(Nilai_database*3)+(Nilai_design*1)+(Nilai_algoritma*2);
     return (jumlah_nilai);
 }
 
-public int rata_rata(){
+public double rata_rata(){
     ratarata = jumlah_nilai/10;
     return (ratarata);
 }
@@ -151,13 +168,14 @@ public int rata_rata(){
 public void output(){
         System.out.println("==============================");
         ifelse();
-        Jumlahnilai();   
         System.out.println("Nomor Induk Mahasiswa : "+ Nomor_mahasiswa);
         System.out.println("Nama Mahasiswa : "+Nama_mahasiswa);
         System.out.println("Kelas: "+Kelas);
         System.out.println("Semester : "+Semester);
-        System.out.println("Jumlah nilai "+ Jumlahnilai());
-        System.out.println("Rata-rata nilai "+ rata_rata());
+        Jumlahnilai();   
+        System.out.println("Jumlah nilai "+ jumlah_nilai);
+        rata_rata();
+        System.out.println("Rata-rata nilai "+ ratarata);
 
     }
 }
